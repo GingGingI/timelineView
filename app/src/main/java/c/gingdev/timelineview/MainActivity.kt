@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
         val adapter = timelineAdapter()
         adapter.items.run {
             add(Pair(timelineItemModel(Start, PARENT_BASE, R.layout.timeline_layout_box_mini), 1))
-            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_blank_mini), 1))
-            add(Pair(timelineItemModel(Middle, PARENT_BASE, R.layout.timeline_layout_box_mini), 1))
-            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_blank), 1))
-            add(Pair(timelineItemModel(Middle, PARENT_BASE, R.layout.timeline_layout_box_mini), 1))
-            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_box_mini), 1))
-            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_blank), 1))
-            add(Pair(timelineItemModel(Middle, PARENT_BASE, R.layout.timeline_layout_box_mini), 1))
-            add(Pair(timelineItemModel(End, PARENT_BASE, R.layout.timeline_layout_box_mini), 1))
+            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_blank_mini), 2))
+            add(Pair(timelineItemModel(Middle, PARENT_BASE, R.layout.timeline_layout_box_mini), 3))
+            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_blank_mini), 4))
+            add(Pair(timelineItemModel(Middle, PARENT_BASE, R.layout.timeline_layout_box_mini), 5))
+//            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_box_mini), 6))
+            add(Pair(timelineItemModel(Middle, PARENT_BASE_ONLY_LINE, R.layout.timeline_layout_blank), 7))
+            add(Pair(timelineItemModel(Middle, PARENT_BASE, R.layout.timeline_layout_box_mini), 8))
+            add(Pair(timelineItemModel(End, PARENT_BASE, R.layout.timeline_layout_box_mini), 9))
         }
 
         adapter.notifyDataSetChanged()

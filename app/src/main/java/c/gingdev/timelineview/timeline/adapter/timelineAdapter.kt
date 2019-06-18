@@ -21,6 +21,6 @@ class timelineAdapter
         = items.size
 
     override fun onBindViewHolder(holder: timelineHolder, position: Int) {
-        holder.bind(items[position].first.itemType, items[position].first.viewType)
+        holder.bind(items[position].first.itemType, items[position].first.viewType, items[position].second)
     }
 }

@@ -12,8 +12,9 @@
 
     <ImageView
             android:id="@+id/timelineIcon"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="8dp"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/timelineTitle"
