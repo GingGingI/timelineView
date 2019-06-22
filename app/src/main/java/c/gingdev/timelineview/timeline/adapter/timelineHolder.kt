@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewStub
 import android.widget.ImageView
-import android.widget.TextClock
 import android.widget.TextView
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView

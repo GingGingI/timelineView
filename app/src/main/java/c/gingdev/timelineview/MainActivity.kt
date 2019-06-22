@@ -1,7 +1,12 @@
 package c.gingdev.timelineview
 
+import android.annotation.SuppressLint
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import c.gingdev.timelineview.timeline.adapter.timelineAdapter
 import c.gingdev.timelineview.timeline.model.*
@@ -13,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        flagInit()
 
         val adapter = timelineAdapter()
         adapter.items.run {
@@ -29,5 +35,22 @@ class MainActivity : AppCompatActivity() {
 
         adapter.notifyDataSetChanged()
         recycler.adapter = adapter
+    }
+
+    @SuppressLint("NewApi")
+    private fun flagInit() {
+        window.run {
+            decorView.systemUiVisibility = (
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
+                            View.SYSTEM_UI_FLAG_FULLSCREEN)
+
+            setFlags(
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) setShowWhenLocked(true)
+            else addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
+        }
     }
 }
